@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="500.0" prefWidth="550.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.CourseController">
+   <children>
+      <TextField fx:id="textFieldCourseName" layoutX="14.0" layoutY="275.0" promptText="IS-project - exampel" />
+      <Label layoutX="14.0" layoutY="254.0" prefHeight="25.0" prefWidth="118.0" text="Name of course:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="14.0" layoutY="305.0" prefHeight="17.0" prefWidth="69.0" text="Credits:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="textFieldCredits" layoutX="14.0" layoutY="323.0" promptText="30 - exampel" />
+      <TableView fx:id="courseTableView" editable="true" layoutX="14.0" layoutY="47.0" prefHeight="200.0" prefWidth="346.0">
+        <columns>
+          <TableColumn fx:id="courseCodeColumn" prefWidth="115.0" text="Course ID" />
+          <TableColumn fx:id="courseNameColumn" prefWidth="115.0" text="Name" />
+            <TableColumn fx:id="courseCreditsColumn" prefWidth="115.0" text="Credits" />
+        </columns>
+      </TableView>
+      <TextArea fx:id="textAreaReturn" editable="false" layoutX="372.0" layoutY="47.0" prefHeight="200.0" prefWidth="149.0" />
+      <Label fx:id="lblResponse" layoutX="211.0" layoutY="266.0" text="Response:" />
+      <ButtonBar layoutX="32.0" layoutY="369.0" prefHeight="47.0" prefWidth="500.0">
+         <buttons>
+            <Button mnemonicParsing="false" onAction="#btnCreateCourse" prefHeight="47.0" prefWidth="149.0" text="Create">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#btnRemoveCourse" prefHeight="47.0" prefWidth="149.0" text="Remove">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#btnCreateCourse" prefHeight="47.0" prefWidth="149.0" text="Edit">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+         </buttons>
+      </ButtonBar>
+      <Button layoutX="14.0" layoutY="459.0" mnemonicParsing="false" onAction="#btnGoBack" text="Go back" />
+      <Label layoutX="243.0" layoutY="14.0" prefHeight="27.0" prefWidth="65.0" text="Courses" textAlignment="CENTER">
+         <font>
+            <Font name="Times New Roman Bold" size="18.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
